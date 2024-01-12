@@ -23,10 +23,10 @@ class ExpenseItem(BaseModel):
     amount_amount: Optional[float]
     amount_currency_symbol: Optional[str]
     amount_currency_code: Optional[str]
-
-    unit_price_amount: Optional[float]
-    unit_price_currency_symbol: Optional[str]
-    unit_price_currency_code: Optional[str]
+    #
+    # unit_price_amount: Optional[float]
+    # unit_price_currency_symbol: Optional[str]
+    # unit_price_currency_code: Optional[str]
 
     customer_name: Optional[str]
     customer_address_receipient: Optional[str]

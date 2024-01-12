@@ -49,7 +49,7 @@ class ParseInvoice:
                 obj['subtotal_currency_code'] = datum.get('Subtotal', {}).get('currencyCode')
 
                 obj['vendor_name'] = datum.get('VendorName')
-                obj['vendor_tax_id'] = datum.get('VendorTaxID')
+                obj['vendor_tax_id'] = datum.get('VendorTaxId')
                 obj['created_at'] = datum.get('created_at')
 
                 obj['payment_term'] = datum.get('PaymentTerm')
@@ -65,6 +65,12 @@ class ParseInvoice:
 
                 if row.product_name == 'New Relic One - Data (PAYG)' and idx > 0:
                     continue
+
+                if row.vendor_name in ['Akamai', 'Linode']:
+                    row.product_name = 'Servers for RoyaleAPI'
+
+                    if idx > 0:
+                        continue
 
                 if row.vendor_name.startswith('CLOUDFLARE'):
                     if idx > 0:
@@ -87,8 +93,16 @@ class ParseInvoice:
 
         rows = sorted(rows, key=sort_order)
 
+        ignore_fields = [
+            'amount_amount',
+            'amount_currency_symbol',
+            'amount_currency_code',
+        ]
+
+        fields = [f for f in ExpenseItem.__fields__.keys() if f not in ignore_fields]
+
         with open(self.dst_csv, 'w') as f:
-            writer = csv.DictWriter(f, ExpenseItem.__fields__.keys())
+            writer = csv.DictWriter(f, fields, extrasaction='ignore')
             writer.writeheader()
             for row in rows:
                 writer.writerow(row.dict())
