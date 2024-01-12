@@ -6,7 +6,7 @@ from app.models.expense import ExpenseItem
 
 class ParseInvoice:
     dst_csv = '/Users/sml/git/smltax/dst/invoice.csv'
-    src_json = '/Users/sml/git/smltax/data/invoice.json'
+    src_json = '/Users/sml/git/smltax/data/invoice-out-1705102986402.json'
 
     def __init__(self):
         pass
