@@ -18,8 +18,19 @@ class ParseInvoice:
         rows = []
         for datum in data:
 
-            for item in datum.get('Items', []):
+            for idx, item in enumerate(datum.get('Items', [])):
                 obj = {}
+
+                obj['invoice_date'] = datum.get('InvoiceDate')
+                obj['invoice_id'] = datum.get('InvoiceID')
+
+                obj['invoice_total_amount'] = datum.get('InvoiceTotal', {}).get('amount')
+                obj['invoice_total_currency_symbol'] = datum.get('InvoiceTotal', {}).get('currencySymbol')
+                obj['invoice_total_currency_code'] = datum.get('InvoiceTotal', {}).get('currencyCode')
+
+                obj['customer_name'] = datum.get('CustomerName')
+                obj['customer_address_receipient'] = datum.get('CustomerAddressRecipient')
+
                 obj['product_name'] = item.get('Description')
                 obj['product_code'] = item.get('ProductCode')
                 obj['quantity'] = item.get('Quantity')
@@ -32,19 +43,49 @@ class ParseInvoice:
                 obj['unit_price_currency_symbol'] = item.get('UnitPrice', {}).get('currencySymbol')
                 obj['unit_price_currency_code'] = item.get('UnitPrice', {}).get('currencyCode')
 
-                obj['subtotal'] = item.get('Subtotal')
-                obj['subtotal_amount'] = item.get('Subtotal', {}).get('amount')
-                obj['subtotal_currency_symbol'] = item.get('Subtotal', {}).get('currencySymbol')
-                obj['subtotal_currency_code'] = item.get('Subtotal', {}).get('currencyCode')
+                obj['subtotal'] = datum.get('Subtotal')
+                obj['subtotal_amount'] = datum.get('Subtotal', {}).get('amount')
+                obj['subtotal_currency_symbol'] = datum.get('Subtotal', {}).get('currencySymbol')
+                obj['subtotal_currency_code'] = datum.get('Subtotal', {}).get('currencyCode')
 
-                obj['vendor_name'] = item.get('VendorName')
-                obj['vendor_tax_id'] = item.get('VendorTaxID')
-                obj['created_at'] = item.get('created_at')
+                obj['vendor_name'] = datum.get('VendorName')
+                obj['vendor_tax_id'] = datum.get('VendorTaxID')
+                obj['created_at'] = datum.get('created_at')
 
-                obj['payment_term'] = item.get('PaymentTerm')
+                obj['payment_term'] = datum.get('PaymentTerm')
 
                 row = ExpenseItem.parse_obj(obj)
+
+                # skip non rows
+                if not row.amount_amount:
+                    continue
+
+                if row.amount_amount < 0:
+                    continue
+
+                if row.product_name == 'New Relic One - Data (PAYG)' and idx > 0:
+                    continue
+
+                if row.vendor_name.startswith('CLOUDFLARE'):
+                    if idx > 0:
+                        continue
+
+                    if row.product_name.startswith('Card ending with'):
+                        continue
+
+                    if row.product_name.startswith('Previous Balance'):
+                        continue
+
                 rows.append(row)
+
+
+        def sort_order(x):
+            return (
+                x.vendor_name or "",
+                x.invoice_date or "",
+            )
+
+        rows = sorted(rows, key=sort_order)
 
         with open(self.dst_csv, 'w') as f:
             writer = csv.DictWriter(f, ExpenseItem.__fields__.keys())

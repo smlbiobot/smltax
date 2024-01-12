@@ -1,257 +1,140 @@
-created_at,product_name,product_code,quantity,amount_amount,amount_currency_symbol,amount_currency_code,unit_price_amount,unit_price_currency_symbol,unit_price_currency_code,payment_term
-,Depth Scanner,BCPDS-,0.1,99.99,$,USD,99.99,$,USD,
-,MonkeyWords,"EZOZMWD-
-SUL",0.1,69.0,$,USD,69.0,$,USD,
-,Plexus 3,"PLEXUS3-
-SUL",0.1,249.99,$,USD,249.99,$,USD,
-,Boxcam 2,"REPDBC2-
-SUL",0.1,19.99,$,USD,19.99,$,USD,
-,Keystone,RCNKE-,0.1,39.0,$,USD,39.0,$,USD,
-,Map Ramp,"BFXMR-
-SUL",0.1,30.0,$,USD,30.0,$,USD,
-,GifGun,"NSMAGG-
-SUL",0.1,29.99,$,USD,29.99,$,USD,
-,Guides,"RTMG-
-SUL",0.1,15.0,$,USD,15.0,$,USD,
-,Pastiche2,"MOBOPA2-
-SUL",0.1,89.0,$,USD,89.0,$,USD,
-,MoBar 2,"MAPMB-
-SUL",0.1,59.0,$,USD,59.0,$,USD,
-,"Loopy
+invoice_date,vendor_name,invoice_id,payment_term,product_name,product_code,quantity,invoice_total_amount,invoice_total_currency_symbol,invoice_total_currency_code,vendor_tax_id,amount_amount,amount_currency_symbol,amount_currency_code,unit_price_amount,unit_price_currency_symbol,unit_price_currency_code,customer_name,customer_address_receipient,created_at
+2022-06-01T00:00:00.000Z,CLOUDFLARE®,,,Cloudflare Pro Plan,,1,62.7,$,USD,,20.0,$,USD,,,,,,2024-01-12T21:19:53.364Z
+2022-07-01T00:00:00.000Z,CLOUDFLARE®,,,Cloudflare Pro Plan,,1,62.75,$,USD,,20.0,$,USD,,,,,,2024-01-12T21:19:53.134Z
+2022-08-01T00:00:00.000Z,CLOUDFLARE®,,,Cloudflare Pro Plan,,1,59.7,$,USD,,20.0,$,USD,,,,,,2024-01-12T21:19:53.788Z
+2022-09-01T00:00:00.000Z,CLOUDFLARE®,,,Cloudflare Pro Plan,,1,61.8,$,USD,,20.0,$,USD,,,,,,2024-01-12T21:19:53.370Z
+2022-10-01T00:00:00.000Z,CLOUDFLARE®,,,Cloudflare Pro Plan,,1,56.0,$,USD,,20.0,$,USD,,,,,,2024-01-12T21:19:53.094Z
+2022-11-01T00:00:00.000Z,CLOUDFLARE®,,,Cloudflare Pro Plan,,1,62.35,$,USD,,20.0,$,USD,,,,,,2024-01-12T21:19:53.103Z
+2022-12-01T00:00:00.000Z,CLOUDFLARE®,,,Cloudflare Pro Plan,,1,40.0,$,USD,,20.0,$,USD,,,,,,2024-01-12T21:19:53.478Z
+2022-12-06T00:00:00.000Z,CLOUDFLARE®,,,Cloudflare Pro Plan,,1,480.0,$,USD,,240.0,$,USD,,,,,,2024-01-12T21:19:53.143Z
+2023-06-10T00:00:00.000Z,CLOUDFLARE®,,,Cloudflare Pro Plan,,1,121.37,$,USD,,117.7,$,USD,,,,,,2024-01-12T21:19:53.353Z
+2023-07-01T00:00:00.000Z,CLOUDFLARE®,,,"Cloudflare Images Basic
+Images Stored (blocks of 100K Images)",,1,5.0,$,USD,,5.0,$,USD,,,,,,2024-01-12T21:19:53.043Z
+2022-04-30T00:00:00.000Z,New Relic.,,Due on receipt,New Relic One - Data (PAYG),,1048,262.0,$,USD,,262.0,$,USD,,,,SML Universe Limited,,2024-01-12T21:20:15.775Z
+2022-05-31T00:00:00.000Z,New Relic.,,Due on receipt,New Relic One - Data (PAYG),,993,248.25,$,USD,,248.25,$,USD,,,,SML Universe Limited,,2024-01-12T21:20:16.039Z
+,"aescripts+
+aeplugins",,PayPal,Depth Scanner,BCPDS-,0.1,99.99,$,USD,,99.99,$,USD,99.99,$,USD,"See-ming Lee
+SML Universe Limited",,2024-01-12T21:15:10.098Z
+,"aescripts+
+aeplugins",,PayPal,MonkeyWords,"EZOZMWD-
+SUL",0.1,69.0,$,USD,,69.0,$,USD,69.0,$,USD,"See-ming Lee
+SML Universe Limited",,2024-01-12T21:19:24.150Z
+,"aescripts+
+aeplugins",,PayPal,Plexus 3,"PLEXUS3-
+SUL",0.1,187.49,$,USD,,249.99,$,USD,249.99,$,USD,"See-ming Lee
+SML Universe Limited",,2024-01-12T21:19:24.163Z
+,"aescripts+
+aeplugins",,PayPal,Boxcam 2,"REPDBC2-
+SUL",0.1,19.99,$,USD,,19.99,$,USD,19.99,$,USD,"See-ming Lee
+SML Universe Limited",,2024-01-12T21:19:24.171Z
+,"aescripts+
+aeplugins",,PayPal,MoBar 2,"MAPMB-
+SUL",0.1,39.53,$,USD,,59.0,$,USD,59.0,$,USD,"See-ming Lee
+SML Universe Limited",,2024-01-12T21:19:25.111Z
+,"aescripts+
+aeplugins",,PayPal,loopFlow,IXLF-,0.1,49.0,$,USD,,49.0,$,USD,49.0,$,USD,"See-ming Lee
+SML Universe Limited",,2024-01-12T21:19:25.223Z
+,"aescripts+
+aeplugins",,PayPal,Reka Grid,IXRG-,0.1,36.75,$,USD,,49.0,$,USD,49.0,$,USD,"See-ming Lee
+SML Universe Limited",,2024-01-12T21:19:25.250Z
+,"aescripts+
+aeplugins",,PayPal,Odometer,PEOD-,0.1,39.95,$,USD,,39.95,$,USD,39.95,$,USD,"See-ming Lee
+SML Universe Limited",,2024-01-12T21:19:25.344Z
+,"aescripts+
+aeplugins",,PayPal,PATTOON 2 Texture & Displace,"IDRFP2-
+SUL",0.1,46.06,$,USD,,61.41,$,USD,61.41,$,USD,"See-ming Lee
+SML Universe Limited",,2024-01-12T21:19:25.353Z
+"2,","aescripts+
+aeplugins",,PayPal,TextExploder V2,"MMTE2-
+SUL",0.1,14.99,$,USD,,19.99,$,USD,19.99,$,USD,"See-ming Lee
+SML Universe Limited",,2024-01-12T21:19:25.144Z
+2022,"aescripts+
+aeplugins",,PayPal,Keystone,RCNKE-,0.1,39.0,$,USD,,39.0,$,USD,39.0,$,USD,"See-ming Lee
+SML Universe Limited",,2024-01-12T21:19:24.187Z
+2022-01-01T00:00:00.000Z,"aescripts+
+aeplugins",,PayPal,"MOBO_Utils
+Downloads MOBO_Utils","MOBOUTIL-
+NL",0.1,14.24,$,USD,,18.99,$,USD,18.99,$,USD,"See-ming Lee
+SML Universe Limited",,2024-01-12T21:19:25.134Z
+2022-01-09T00:00:00.000Z,"aescripts+
+aeplugins",,PayPal,Map Ramp,"BFXMR-
+SUL",0.1,30.0,$,USD,,30.0,$,USD,30.0,$,USD,"See-ming Lee
+SML Universe Limited",,2024-01-12T21:19:24.207Z
+2022-04-01T00:00:00.000Z,"aescripts+
+aeplugins",,PayPal,Randomatic 2,RCNR2-,0.1,21.75,$,USD,,29.0,$,USD,29.0,$,USD,"See-ming Lee
+SML Universe Limited",,2024-01-12T21:19:25.216Z
+2022-12-01T00:00:00.000Z,"aescripts+
+aeplugins",,PayPal,GifGun,"NSMAGG-
+SUL",0.1,29.99,$,USD,,29.99,$,USD,29.99,$,USD,"See-ming Lee
+SML Universe Limited",,2024-01-12T21:19:24.317Z
+2022-12-01T00:00:00.000Z,"aescripts+
+aeplugins",,PayPal,Pastiche2,"MOBOPA2-
+SUL",0.1,66.75,$,USD,,89.0,$,USD,89.0,$,USD,"See-ming Lee
+SML Universe Limited",,2024-01-12T21:19:25.095Z
+2022-12-03T00:00:00.000Z,"aescripts+
+aeplugins",,PayPal,"Loopy
 License Type Single User License
 Downloads Loopy","ATML-
-SUL",0.1,9.95,$,USD,9.95,$,USD,
-,"KBar3
+SUL",0.1,37.45,$,USD,,9.95,$,USD,9.95,$,USD,"See-ming Lee
+SML Universe Limited",,2024-01-12T21:19:25.117Z
+2022-12-03T00:00:00.000Z,"aescripts+
+aeplugins",,PayPal,"KBar3
 License Type Single User License
 Downloads KBar3","KIKB3-
-SUL",0.1,39.99,$,USD,39.99,$,USD,
-,BeatEdit for After Effects,MMBEA-,0.1,149.99,$,USD,149.99,$,USD,
-,"MOBO_Utils
-Downloads MOBO_Utils","MOBOUTIL-
-NL",0.1,18.99,$,USD,18.99,$,USD,
-,Decompose Text,"NABDT-
-NYOP",0.1,0.0,$,USD,0.0,$,USD,
-,TextExploder V2,"MMTE2-
-SUL",0.1,19.99,$,USD,19.99,$,USD,
-,Randomatic 2,RCNR2-,0.1,29.0,$,USD,29.0,$,USD,
-,loopFlow,IXLF-,0.1,49.0,$,USD,49.0,$,USD,
-,Reka Grid,IXRG-,0.1,49.0,$,USD,49.0,$,USD,
-,Odometer,PEOD-,0.1,39.95,$,USD,39.95,$,USD,
-,TextBox 2,"PETB2-
-SUL",0.1,29.95,$,USD,29.95,$,USD,
-,PATTOON 2 Texture & Displace,"IDRFP2-
-SUL",0.1,61.41,$,USD,61.41,$,USD,
-,"Cloudflare Images Basic
-Images Stored (blocks of 100K Images)",,1,5.0,$,USD,,,,
-,"Previous Balance
-Total",,,-34.84,$,USD,,,,
-,,,,-2.58,$,USD,,,,
-,,,,-17.42,$,USD,,,,
-,,,,-17.42,$,USD,,,,
-,Cloudflare Pro Plan,,1,20.0,$,USD,,,,
-,Cloudflare Pro Plan,,1,20.0,$,USD,,,,
-,Good Requests (First 10K are included),,3204730,16.0,$,USD,,,,
-,Previous,,,61.8,$,USD,,,,
-,"Card ending with 7511
-(MASTERCARD)",,,61.8,$,USD,,,,
-,Cloudflare Pro Plan,,1,20.0,$,USD,,,,
-,Cloudflare Pro Plan,,1,20.0,$,USD,,,,
-,Rate,,,,,,,,,
-,Good Requests (First 10K are included),,4471724,22.35,$,USD,,,,
-,"Card ending with 7511
-(MASTERCARD)",,,56.0,$,USD,,,,
-,Cloudflare Pro Plan,,1,20.0,$,USD,,,,
-,Cloudflare Pro Plan,,1,20.0,$,USD,,,,
-,"Rate
-Good Requests (First 10K are included)",,4550523,22.75,$,USD,,,,
-,Previous Balance,,,62.7,$,USD,,,,
-,Total Payments,,,,,,,,,
-,"Card ending with 7511
-(MASTERCARD)",,,62.7,$,USD,,,,
-,Cloudflare Pro Plan,,1,240.0,$,USD,,,,
-,Cloudflare Pro Plan,,1,240.0,$,USD,,,,
-,Previous Balance,,,40.0,$,USD,,,,
-,Total Payments,,,-520.0,$,USD,,,,
-,Total Credits,,,-34.84,$,USD,,,,
-,"Card ending with 7511
-(MASTERCARD)",,,40.0,$,USD,,,,
-,"Card ending with 7511
-(MASTERCARD)",,,240.0,$,USD,,,,
-,"Card ending with 7511
-(MASTERCARD)",,,240.0,$,USD,,,,
-,,,,-17.42,$,USD,,,,
-,,,,-17.42,$,USD,,,,
-,Cloudflare Pro Plan,,1,117.7,$,USD,,,,
-,"Cloudflare Images Basic
-Images Stored (blocks of 100K Images)",,1,3.67,$,USD,,,,
-,Previous Balance,,,-34.84,$,USD,,,,
-,Total Payments,,,-121.37,$,USD,,,,
-,Total Credits,,,-37.42,$,USD,,,,
-,"Card ending with 7511
-(MASTERCARD)",,,3.67,$,USD,,,,
-,"Card ending with 7511
-(MASTERCARD)",,,117.7,$,USD,,,,
-,,,,-17.42,$,USD,,,,
-,,,,-2.58,$,USD,,,,
-,,,,-17.42,$,USD,,,,
-,Cloudflare Pro Plan,,1,20.0,$,USD,,,,
-,Cloudflare Pro Plan,,1,20.0,$,USD,,,,
-,"Previous Balance
-Total Payments",,,65.9,$,USD,,,,
-,"Card ending with 7511
-(MASTERCARD)",,,65.9,$,USD,,,,
-,Cloudflare Pro Plan,,1,20.0,$,USD,,,,
-,Cloudflare Pro Plan,,1,20.0,$,USD,,,,
-,Rate,,,,,,,,,
-,Good Requests (First 10K are included),,4364307,21.8,$,USD,,,,
-,"Previous Balance
-Total Payments",,,59.7,$,USD,,,,
-,"Card ending with 7511
-(MASTERCARD)",,,59.7,$,USD,,,,
-,Cloudflare Pro Plan,,1,20.0,$,USD,,,,
-,Cloudflare Pro Plan,,1,20.0,$,USD,,,,
-,Previous Balance,,,62.35,$,USD,,,,
-,Total Payments,,,,,,,,,
-,"Card ending with 7511
-(MASTERCARD)",,,62.35,$,USD,,,,
-,Cloudflare Pro Plan,,1,20.0,$,USD,,,,
-,Cloudflare Pro Plan,,1,20.0,$,USD,,,,
-,"Rate
-Good Requests (First 10K are included)",,3945102,19.7,$,USD,,,,
-,Previous Balance,,,62.75,$,USD,,,,
-,Total Payments,,,,,,,,,
-,"Card ending with 7511
-(MASTERCARD)",,,62.75,$,USD,,,,
-,"Datylon Plugin for Adobe Illustrator Monthly Plan
+SUL",0.1,37.45,$,USD,,39.99,$,USD,39.99,$,USD,"See-ming Lee
+SML Universe Limited",,2024-01-12T21:19:25.117Z
+2023-03-07T00:00:00.000Z,"aescripts+
+aeplugins",,PayPal,Guides,"RTMG-
+SUL",0.1,15.0,$,USD,,15.0,$,USD,15.0,$,USD,"See-ming Lee
+SML Universe Limited",,2024-01-12T21:19:25.080Z
+2023-03-09T00:00:00.000Z,"aescripts+
+aeplugins",,PayPal,BeatEdit for After Effects,MMBEA-,0.1,149.99,$,USD,,149.99,$,USD,149.99,$,USD,"See-ming Lee
+SML Universe Limited",,2024-01-12T21:19:25.123Z
+2023-03-28T00:00:00.000Z,"aescripts+
+aeplugins",,PayPal,TextBox 2,"PETB2-
+SUL",0.1,29.95,$,USD,,29.95,$,USD,29.95,$,USD,"See-ming Lee
+SML Universe Limited",,2024-01-12T21:19:25.348Z
+2022-06-30T00:00:00.000Z,datylon,,,"Datylon Plugin for Adobe Illustrator Monthly Plan
 starting at Jun 30, 2022
-Datylon Account: seeminglee@smluniverse.com",,1,19.95,USD,USD,19.95,USD,USD,
-,"Datylon Plugin for Adobe Illustrator Monthly Plan
-starting at Aug 30, 2022
-Datylon Account: seeminglee@smluniverse.com",,1,19.95,USD,USD,19.95,USD,USD,
-,"Datylon Plugin for Adobe Illustrator Monthly Plan
-starting at Oct 30, 2022
-Datylon Account: seeminglee@smluniverse.com",,1,19.95,USD,USD,19.95,USD,USD,
-,"Datylon Plugin for Adobe Illustrator Monthly Plan
-starting at Dec 30, 2022
-Datylon Account: seeminglee@smluniverse.com",,1,19.95,USD,USD,19.95,USD,USD,
-,"Datylon Plugin for Adobe Illustrator Monthly Plan
-starting on May 30, 2023
-Datylon Account: seeminglee@smluniverse.com",,1,19.95,USD,USD,19.95,USD,USD,
-,"Datylon Plugin for Adobe Illustrator Monthly Plan
-starting at Sep 30, 2022
-Datylon Account: seeminglee@smluniverse.com",,1,19.95,USD,USD,19.95,USD,USD,
-,"Datylon Plugin for Adobe Illustrator Monthly Plan
-starting at Apr 30, 2023
-Datylon Account: seeminglee@smluniverse.com",,1,19.95,USD,USD,19.95,USD,USD,
-,"Datylon Plugin for Adobe Illustrator Monthly Plan
-starting at Jan 30, 2023
-Datylon Account: seeminglee@smluniverse.com",,1,19.95,USD,USD,19.95,USD,USD,
-,"Datylon Plugin for Adobe Illustrator Monthly Plan
+Datylon Account: seeminglee@smluniverse.com",,1,19.95,USD,USD,,19.95,USD,USD,19.95,USD,USD,SML Universe Limited,SML Universe Limited,2024-01-12T21:20:04.913Z
+2022-07-30T00:00:00.000Z,datylon,,,"Datylon Plugin for Adobe Illustrator Monthly Plan
 starting at Jul 30, 2022
-Datylon Account: seeminglee@smluniverse.com",,1,19.95,USD,USD,19.95,USD,USD,
-,"Datylon Plugin for Adobe Illustrator Monthly Plan
-starting at Feb 28, 2023
-Datylon Account: seeminglee@smluniverse.com",,1,19.95,USD,USD,19.95,USD,USD,
-,"Datylon Plugin for Adobe Illustrator Monthly Plan
-starting at Mar 30, 2023
-Datylon Account: seeminglee@smluniverse.com",,1,19.95,USD,USD,19.95,USD,USD,
-,"Datylon Plugin for Adobe Illustrator Monthly Plan
+Datylon Account: seeminglee@smluniverse.com",,1,19.95,USD,USD,,19.95,USD,USD,19.95,USD,USD,SML Universe Limited,SML Universe Limited,2024-01-12T21:20:05.106Z
+2022-08-30T00:00:00.000Z,datylon,,,"Datylon Plugin for Adobe Illustrator Monthly Plan
+starting at Aug 30, 2022
+Datylon Account: seeminglee@smluniverse.com",,1,19.95,USD,USD,,19.95,USD,USD,19.95,USD,USD,SML Universe Limited,SML Universe Limited,2024-01-12T21:20:04.919Z
+2022-09-30T00:00:00.000Z,datylon,,,"Datylon Plugin for Adobe Illustrator Monthly Plan
+starting at Sep 30, 2022
+Datylon Account: seeminglee@smluniverse.com",,1,19.95,USD,USD,,19.95,USD,USD,19.95,USD,USD,SML Universe Limited,SML Universe Limited,2024-01-12T21:20:04.975Z
+2022-10-30T00:00:00.000Z,datylon,,card,"Datylon Plugin for Adobe Illustrator Monthly Plan
+starting at Oct 30, 2022
+Datylon Account: seeminglee@smluniverse.com",,1,19.95,USD,USD,,19.95,USD,USD,19.95,USD,USD,SML Universe Limited,SML Universe Limited,2024-01-12T21:20:04.932Z
+2022-11-30T00:00:00.000Z,datylon,,card,"Datylon Plugin for Adobe Illustrator Monthly Plan
 starting at Nov 30, 2022
-Datylon Account: seeminglee@smluniverse.com",,1,19.95,USD,USD,19.95,USD,USD,
-,New Relic One - Core Users (PAYG),,Core Users,0.0,$,USD,,,,
-,New Relic One - Data (PAYG),,1129,338.7,$,USD,,,,
-,"New Relic One - Standard Full Platform Users
-(PAYG)",,11,0.0,$,USD,,,,
-,,P-00655798,Card Number,-338.7,$,USD,,,,
-,New Relic One - Data (PAYG),,1129,338.7,$,USD,0.3,,USD,
-,New Relic One - Core Users (PAYG),,49,0.0,$,USD,,,,
-,New Relic One - Standard Full Platform Users (PAYG),,99,0.0,$,USD,,,,
-,"New Relic - Additional Synthetics Checks
-(PAYG)",,Checks,0.0,$,USD,,,,
-,New Relic One - Core Users (PAYG),,Core Users,0.0,$,USD,,,,
-,New Relic One - Data (PAYG),,1045,313.5,$,USD,,,,
-,"New Relic One - Standard Full Platform Users
-(PAYG)",,11,0.0,$,USD,,,,
-,,,Card,-313.5,$,USD,,,,
-,New Relic One - Data (PAYG),,,313.5,$,USD,0.3,,USD,
-,New Relic One - Core Users (PAYG),,49,0.0,$,USD,,,,
-,New Relic One - Standard Full Platform Users (PAYG),,99,0.0,$,USD,,,,
-,New Relic - Additional Synthetics Checks (PAYG),,,0.0,$,USD,,,,
-,New Relic One - Core Users (PAYG),,Core Users,0.0,$,USD,,,,
-,New Relic One - Data (PAYG),,1212,363.6,$,USD,,,,
-,"New Relic One - Standard Full Platform Users
-(PAYG)",,11,0.0,$,USD,,,,
-,,P-00686813,Card Number,-363.6,$,USD,,,,
-,New Relic One - Data (PAYG),,1212,363.6,$,USD,0.3,,USD,
-,New Relic One - Core Users (PAYG),,49,0.0,$,USD,,,,
-,New Relic One - Standard Full Platform Users (PAYG),,99,0.0,$,USD,,,,
-,New Relic One - Data (PAYG),,1048,262.0,$,USD,,,,
-,New Relic One - Standard Users (PAYG),,1,0.0,$,USD,,,,
-,"Payment
-Card MasterCard
-Number:",P-00581866,,-262.0,$,USD,,,,
-,New Relic One - Core Users (PAYG),,Core Users,0.0,$,USD,,,,
-,New Relic One - Data (PAYG),,1470,441.0,$,USD,,,,
-,"New Relic One - Standard Full Platform Users
-(PAYG)",,11,0.0,$,USD,,,,
-,,,Card Number,-441.0,$,USD,,,,
-,New Relic One - Data (PAYG),,1470,441.0,$,USD,0.3,,USD,
-,New Relic One - Core Users (PAYG),,49,0.0,$,USD,,,,
-,New Relic One - Standard Full Platform Users (PAYG),,99,0.0,$,USD,,,,
-,New Relic One - Data (PAYG),,1021,255.25,$,USD,,,,
-,New Relic One - Standard Users (PAYG),,1,0.0,$,USD,,,,
-,,P-00624988,,-255.25,$,USD,,,,
-,New Relic One - Data (PAYG),,1021,255.25,$,USD,0.25,,USD,
-,New Relic One - Standard Users (PAYG),,,0.0,$,USD,,,,
-,New Relic One - Data (PAYG),,856,256.8,$,USD,,,,
-,,,,-256.8,$,USD,,,,
-,New,,,256.8,$,USD,,,,
-,New Relic One - Data (PAYG),,944,236.0,$,USD,,,,
-,New Relic One - Standard Users (PAYG),,1,0.0,$,USD,,,,
-,,P-00610386,,-236.0,$,USD,,,,
-,New Relic One - Data (PAYG),,,236.0,$,USD,,,,
-,New Relic One - Standard Users (PAYG),,,0.0,$,USD,,,,
-,"New Relic - Additional Synthetics Checks
-(PAYG)",,0 Checks,0.0,$,USD,,,,
-,New Relic One - Core Users (PAYG),,0 Core Users,0.0,$,USD,,,,
-,New Relic One - Data (PAYG),,1077,323.1,$,USD,,,,
-,"New Relic One - Standard Full Platform Users
-(PAYG)",,11,0.0,$,USD,,,,
-,,,,,,,,,,
-,New Relic One - Data (PAYG),,,323.1,$,USD,0.3,,USD,
-,New Relic One - Core Users (PAYG),,,0.0,$,USD,49.0,,USD,
-,New Relic One - Standard Full Platform Users (PAYG),,,0.0,$,USD,99.0,,USD,
-,New Relic - Additional Synthetics Checks (PAYG),,,,,,,,,
-,New Relic One - Data (PAYG),,993,248.25,$,USD,,,,
-,New Relic One - Standard Users (PAYG),,1,0.0,$,USD,,,,
-,,P-00595945,,-248.25,$,USD,,,,
-,New Relic One - Data (PAYG),,899,269.7,$,USD,,,,
-,,,,-269.7,$,USD,,,,
-,New Relic One - Data (PAYG),,,269.7,$,USD,,,,
-,New Relic One - Core Users (PAYG),,Core Users,0.0,$,USD,,,,
-,New Relic One - Data (PAYG),,1454,436.2,$,USD,,,,
-,"New Relic One - Standard Full Platform Users
-(PAYG)",,11,0.0,$,USD,,,,
-,,P-00640659,Card Number,-436.2,$,USD,,,,
-,New Relic One - Data (PAYG),,1454,436.2,$,USD,0.3,,USD,
-,New Relic One - Core Users (PAYG),,49,0.0,$,USD,,,,
-,New Relic One - Standard Full Platform Users (PAYG),,99,0.0,$,USD,,,,
-,New Relic One - Core Users (PAYG),,Core Users,0.0,$,USD,,,,
-,New Relic One - Data (PAYG),,1160,348.0,$,USD,,,,
-,"New Relic One - Standard Full Platform Users
-(PAYG)",,11,0.0,$,USD,,,,
-,,P-00703378,Card Number,-348.0,$,USD,,,,
-,New Relic One - Data (PAYG),,1160,348.0,$,USD,0.3,,USD,
-,New Relic One - Core Users (PAYG),,49,0.0,$,USD,,,,
-,New Relic One - Standard Full Platform Users (PAYG),,99,0.0,$,USD,,,,
-,"New Relic - Additional Synthetics Checks
-(PAYG)",,1850,9.25,$,USD,,,,
-,New Relic One - Core Users (PAYG),,0 Core Users,0.0,$,USD,,,,
-,New Relic One - Data (PAYG),,1019,305.7,$,USD,,,,
-,"New Relic One - Standard Full Platform Users
-(PAYG)",,11,0.0,$,USD,,,,
-,,,,-314.95,$,USD,,,,
-,New Relic One - Data (PAYG),,,305.7,$,USD,0.3,,USD,
-,New Relic One - Core Users (PAYG),,,0.0,$,USD,49.0,,USD,
-,New Relic One - Standard Full Platform Users (PAYG),,,0.0,$,USD,99.0,,USD,
-,New Relic - Additional Synthetics Checks (PAYG),,,9.25,$,USD,,,,
+Datylon Account: seeminglee@smluniverse.com",,1,19.95,USD,USD,,19.95,USD,USD,19.95,USD,USD,SML Universe Limited,SML Universe Limited,2024-01-12T21:20:05.561Z
+2022-12-30T00:00:00.000Z,datylon,,card,"Datylon Plugin for Adobe Illustrator Monthly Plan
+starting at Dec 30, 2022
+Datylon Account: seeminglee@smluniverse.com",,1,19.95,USD,USD,,19.95,USD,USD,19.95,USD,USD,SML Universe Limited,SML Universe Limited,2024-01-12T21:20:04.937Z
+2023-01-30T00:00:00.000Z,datylon,,,"Datylon Plugin for Adobe Illustrator Monthly Plan
+starting at Jan 30, 2023
+Datylon Account: seeminglee@smluniverse.com",,1,19.95,USD,USD,,19.95,USD,USD,19.95,USD,USD,SML Universe Limited,SML Universe Limited,2024-01-12T21:20:05.025Z
+2023-02-28T00:00:00.000Z,datylon,,,"Datylon Plugin for Adobe Illustrator Monthly Plan
+starting at Feb 28, 2023
+Datylon Account: seeminglee@smluniverse.com",,1,19.95,USD,USD,,19.95,USD,USD,19.95,USD,USD,SML Universe Limited,SML Universe Limited,2024-01-12T21:20:05.123Z
+2023-03-30T00:00:00.000Z,datylon,,,"Datylon Plugin for Adobe Illustrator Monthly Plan
+starting at Mar 30, 2023
+Datylon Account: seeminglee@smluniverse.com",,1,19.95,USD,USD,,19.95,USD,USD,19.95,USD,USD,SML Universe Limited,SML Universe Limited,2024-01-12T21:20:05.548Z
+2023-04-30T00:00:00.000Z,datylon,,,"Datylon Plugin for Adobe Illustrator Monthly Plan
+starting at Apr 30, 2023
+Datylon Account: seeminglee@smluniverse.com",,1,19.95,USD,USD,,19.95,USD,USD,19.95,USD,USD,SML Universe Limited,SML Universe Limited,2024-01-12T21:20:04.982Z
+2023-05-30T00:00:00.000Z,datylon,,,"Datylon Plugin for Adobe Illustrator Monthly Plan
+starting on May 30, 2023
+Datylon Account: seeminglee@smluniverse.com",,1,19.95,USD,USD,,19.95,USD,USD,19.95,USD,USD,SML Universe Limited,SML Universe Limited,2024-01-12T21:20:04.964Z
+2022-06-30T00:00:00.000Z,new relic,,Due on receipt,New Relic One - Data (PAYG),,944,236.0,$,USD,,236.0,$,USD,,,,SML Universe Limited,,2024-01-12T21:20:15.905Z
+2022-07-31T00:00:00.000Z,new relic,,Due on receipt,New Relic One - Data (PAYG),,1021,255.25,$,USD,,255.25,$,USD,,,,SML Universe Limited,,2024-01-12T21:20:15.795Z
+2023-03-31T00:00:00.000Z,new relic,,Due on receipt,"New Relic - Additional Synthetics Checks
+(PAYG)",,1850,314.95,$,USD,,9.25,$,USD,,,,SML Universe Limited,,2024-01-12T21:20:16.435Z
+2023-03-31T00:00:00.000Z,new relic,,Due on receipt,New Relic - Additional Synthetics Checks (PAYG),,,314.95,$,USD,,9.25,$,USD,,,,SML Universe Limited,,2024-01-12T21:20:16.435Z
+2023-04-30T00:00:00.000Z,new relic,,Due on receipt,New Relic One - Data (PAYG),,856,256.8,$,USD,,256.8,$,USD,,,,SML Universe Limited,,2024-01-12T21:20:15.865Z
+2023-04-30T00:00:00.000Z,new relic,,Due on receipt,New,,,256.8,$,USD,,256.8,$,USD,,,,SML Universe Limited,,2024-01-12T21:20:15.865Z
+2023-05-31T00:00:00.000Z,new relic,,Due on receipt,New Relic One - Data (PAYG),,899,269.7,$,USD,,269.7,$,USD,,,,SML Universe Limited,,2024-01-12T21:20:16.197Z
