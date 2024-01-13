@@ -17,7 +17,7 @@ class ParseInvoice:
     src_aws_csv = '/Users/sml/git/smltax/data/aws-fix.csv'
     src_godaddy_csv = '/Users/sml/git/smltax/data/godaddy-export.csv'
 
-    def __init__(self, start_date = '', end_date=''):
+    def __init__(self, start_date='', end_date=''):
         self.start_date = start_date
         self.end_date = end_date
 
@@ -30,6 +30,7 @@ class ParseInvoice:
 
         rows = []
         for datum in data:
+            new_relic_dates = []
 
             for idx, item in enumerate(datum.get('Items', [])):
                 obj = {}
@@ -76,8 +77,21 @@ class ParseInvoice:
                 if row.amount_amount < 0:
                     continue
 
-                if row.product_name == 'New Relic One - Data (PAYG)' and idx > 0:
-                    continue
+                # 'luminar'
+                if 'luminar' in row.vendor_name.lower():
+                    row.invoice_total_currency_code = 'HKD'
+
+                # new relic
+                if 'new relic' in row.vendor_name.lower():
+                    row.vendor_name = 'new relic'
+
+                if row.vendor_name == 'new relic':
+                    if row.invoice_date in new_relic_dates:
+                        continue
+                    new_relic_dates.append(row.invoice_date)
+
+                # if row.product_name == 'New Relic One - Data (PAYG)' and idx > 0:
+                #     continue
 
                 if row.vendor_name in ['Akamai', 'Linode']:
                     row.product_name = 'Servers for RoyaleAPI'
@@ -94,9 +108,9 @@ class ParseInvoice:
                         '2023-11',
                         '2023-12',
                     ]
-                    print(f"{row.invoice_date=}")
+                    # print(f"{row.invoice_date=}")
                     add_row = True
-                    for sd  in skip_dates:
+                    for sd in skip_dates:
                         if row.invoice_date.startswith(sd):
                             add_row = False
 
@@ -105,7 +119,6 @@ class ParseInvoice:
 
                 if row.vendor_name in ['Akamai', 'Linode']:
                     row.vendor_name = 'Akamzi / Linode'
-
 
                 if row.vendor_name.startswith('CLOUDFLARE'):
                     if idx > 0:
@@ -127,7 +140,10 @@ class ParseInvoice:
                     row.vendor_name = '3HK / Supreme'
 
                 # Apple
-                if row.product_name.startswith('iCloud'):
+                if any([
+                    row.vendor_name.lower().startswith('apple'),
+                    row.product_name.lower().startswith('icloud'),
+                ]):
                     row.vendor_name = 'Apple'
                     row.invoice_total_currency_code = 'HKD'
 
@@ -138,7 +154,6 @@ class ParseInvoice:
 
                 if row.invoice_date:
                     row.invoice_date = dateparser.parse(row.invoice_date, settings={'TIMEZONE': 'UTC'}).isoformat()
-
 
                 rows.append(row)
 
@@ -158,8 +173,8 @@ class ParseInvoice:
                     invoice_date=dateparser.parse(row['Transaction date']).isoformat(),
                     vendor_name='Amazon Web Services',
                     invoice_id=row['Invoice ID'],
-                    producproduct_namet_name="Hosting for RoyaleAPI",
-                    payment_term="Payment method",
+                    product_name="Hosting for RoyaleAPI",
+                    payment_term=row["Payment method"],
                     invoice_total_amount=float(row['Amount']),
                     invoice_total_currency_symbol='$',
                     invoice_total_currency_code=row['Currency'],
@@ -173,8 +188,38 @@ class ParseInvoice:
         return items
 
     def parse_godaddy_rows(self):
-        rows = []
-        return rows
+        items = []
+
+        with open(self.src_godaddy_csv,  encoding='utf-8-sig') as f:
+            csv_reader = csv.DictReader(f)
+            for row in csv_reader:
+
+                if not row.get('Order date'):
+                    continue
+
+
+
+                product_name = f"{row['Product name']} {row['Name']}"
+
+                item = ExpenseItem.parse_obj(dict(
+                    invoice_date=dateparser.parse(row['Order date']).isoformat(),
+                    vendor_name='GoDaddy',
+                    invoice_id=row['Receipt number'],
+                    product_name=product_name,
+                    payment_term=row["Payment Category"],
+                    invoice_total_amount=float(row['Order total']),
+                    invoice_total_currency_symbol='$',
+                    invoice_total_currency_code=row['Currency'],
+                    amount_amount=float(row['Order total']),
+                    amount_currency_symbol='$',
+                    amount_currency_code=row['Currency'],
+                    created_at="",
+                    customer_name=row['Email'],
+                ))
+
+                items.append(item)
+
+        return items
 
     def filter_rows(self, rows):
         _rows = []
@@ -214,7 +259,7 @@ class ParseInvoice:
         usd_total = 0
         for row in rows:
             if row.invoice_total_currency_code == 'HKD':
-                usd_total += row.invoice_total_amount /7.78
+                usd_total += row.invoice_total_amount / 7.78
                 # pass
             else:
                 usd_total += row.invoice_total_amount
@@ -238,8 +283,6 @@ class ParseInvoice:
                 for row in rows:
                     writer.writerow(row.dict())
 
-
-
     def run(self):
 
         rows = (
@@ -253,10 +296,6 @@ class ParseInvoice:
 
         self.calculate_totals(rows)
         self.write_csvs(rows)
-
-
-
-
 
 
 def main():

@@ -29,6 +29,6 @@ class ExpenseItem(BaseModel):
     # unit_price_currency_code: Optional[str]
 
     customer_name: Optional[str]
-    customer_address_receipient: Optional[str]
+    customer_address_recipient: Optional[str]
 
     created_at: Optional[str]
