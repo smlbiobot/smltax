@@ -80,6 +80,28 @@ class ParseInvoice:
                     if idx > 0:
                         continue
 
+                    skip_dates = [
+                        '2023-06',
+                        '2023-07',
+                        '2023-08',
+                        '2023-09',
+                        '2023-10',
+                        '2023-11',
+                        '2023-12',
+                    ]
+                    print(f"{row.invoice_date=}")
+                    add_row = True
+                    for sd  in skip_dates:
+                        if row.invoice_date.startswith(sd):
+                            add_row = False
+
+                    if not add_row:
+                        continue
+
+                if row.vendor_name in ['Akamai', 'Linode']:
+                    row.vendor_name = 'Akamzi / Linode'
+
+
                 if row.vendor_name.startswith('CLOUDFLARE'):
                     if idx > 0:
                         continue
