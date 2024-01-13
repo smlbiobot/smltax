@@ -7,13 +7,17 @@ import dateparser
 
 class ParseInvoice:
     dst_csv = '/Users/sml/git/smltax/dst/invoice.csv'
-    src_json = '/Users/sml/git/smltax/data/invoice-out-1705104508271.json'
+    src_json = '/Users/sml/git/smltax/data/invoice-out-1705105698274.json'
 
-    src_aws_csv = '/Users/sml/git/smltax/data/aws-transactions_history_2024-01-13T00_01_31.749Z.csv'
+    src_aws_csv = '/Users/sml/git/smltax/data/aws-fix.csv'
     src_godaddy_csv = '/Users/sml/git/smltax/data/godaddy-export.csv'
 
-    def __init__(self):
-        pass
+    def __init__(self, start_date = '', end_date=''):
+        self.start_date = start_date
+        self.end_date = end_date
+
+        self.start_date_dt = dateparser.parse(self.start_date, settings={'TIMEZONE': 'UTC'})
+        self.end_date_dt = dateparser.parse(self.end_date, settings={'TIMEZONE': 'UTC'})
 
     def parse_invoice(self):
         with open(self.src_json) as f:
@@ -86,6 +90,29 @@ class ParseInvoice:
                     if row.product_name.startswith('Previous Balance'):
                         continue
 
+                # 3 HK
+                if all([
+                    row.invoice_total_currency_code == 'TWD',
+                    row.customer_name == 'Mx Lxx Sxx Mxxx',
+                ]):
+                    row.invoice_total_currency_code = 'HKD'
+                    row.product_name = '3HK Mobile Phone Bill'
+                    row.vendor_name = '3HK / Supreme'
+
+                # Apple
+                if row.product_name.startswith('iCloud'):
+                    row.vendor_name = 'Apple'
+                    row.invoice_total_currency_code = 'HKD'
+
+                # Midjourney
+                if 'Midjourney' in row.vendor_name:
+                    if row.product_name.startswith('Rollover'):
+                        continue
+
+                if row.invoice_date:
+                    row.invoice_date = dateparser.parse(row.invoice_date, settings={'TIMEZONE': 'UTC'}).isoformat()
+
+
                 rows.append(row)
 
         return rows
@@ -96,7 +123,7 @@ class ParseInvoice:
         with open(self.src_aws_csv) as f:
             csv_reader = csv.DictReader(f)
             for row in csv_reader:
-                print(row)
+
                 if not row.get('Transaction date'):
                     continue
 
@@ -112,10 +139,8 @@ class ParseInvoice:
                     amount_amount=float(row['Amount']),
                     amount_currency_symbol='$',
                     amount_currency_code=row['Currency'],
-                    created_at=row['Post Date'],
+                    created_at="",
                 ))
-
-                print(item)
 
                 items.append(item)
         return items
@@ -123,6 +148,53 @@ class ParseInvoice:
     def parse_godaddy_rows(self):
         rows = []
         return rows
+
+    def filter_rows(self, rows):
+        _rows = []
+        for row in rows:
+            if not row.invoice_date:
+                continue
+
+            row_date = dateparser.parse(row.invoice_date, settings={'TIMEZONE': 'UTC'})
+
+            try:
+
+                if row_date < self.start_date_dt:
+                    continue
+
+                if row_date > self.end_date_dt:
+                    continue
+            except TypeError:
+                print(f"{row_date=}")
+                print(f"{self.start_date_dt=}")
+
+            _rows.append(row)
+
+        return _rows
+
+    def sort_rows(self, rows):
+
+        def sort_order(x):
+            return (
+                x.vendor_name or "",
+                x.invoice_date or "",
+            )
+
+        rows = sorted(rows, key=sort_order)
+        return rows
+
+    def calculate_totals(self, rows):
+        usd_total = 0
+        for row in rows:
+            if row.invoice_total_currency_code == 'HKD':
+                usd_total += row.invoice_total_amount /7.78
+                # pass
+            else:
+                usd_total += row.invoice_total_amount
+
+        print(f"Total: {usd_total=}")
+        print(f"Total: {usd_total/12=}")
+
 
     def run(self):
 
@@ -132,13 +204,12 @@ class ParseInvoice:
                 self.parse_godaddy_rows()
         )
 
-        def sort_order(x):
-            return (
-                x.vendor_name or "",
-                x.invoice_date or "",
-            )
+        # rows = self.filter_rows(rows)
+        rows = self.sort_rows(rows)
 
-        rows = sorted(rows, key=sort_order)
+        self.calculate_totals(rows)
+
+
 
         ignore_fields = [
             'amount_amount',
@@ -156,7 +227,10 @@ class ParseInvoice:
 
 
 def main():
-    job = ParseInvoice()
+    job = ParseInvoice(
+        start_date='2022-05-01',
+        end_date='2023-05-31',
+    )
     job.run()
 
 

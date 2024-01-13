@@ -1,0 +1,13 @@
+Transaction date,Invoice ID,Payment method,Type,Currency,Amount,Billing period,Service provider,Charge type,Purchase order ID,Payer account ID
+"June 3, 2022","1046843857","Credit card ending in 7511","Payment","USD","208.41","May 2022","AWS Inc.","Usage","-","694214979702"
+"July 3, 2022","1080411957","Credit card ending in 7511","Payment","USD","220.62","June 2022","AWS Inc.","Usage","-","694214979702"
+"August 3, 2022","1102898169","Credit card ending in 7511","Payment","USD","240.81","July 2022","AWS Inc.","Usage","-","694214979702"
+"September 3, 2022","1127551301","Credit card ending in 7511","Payment","USD","263.63","August 2022","AWS Inc.","Usage","-","694214979702"
+"October 3, 2022","1152050673","Credit card ending in 7511","Payment","USD","285.45","September 2022","AWS Inc.","Usage","-","694214979702"
+"November 3, 2022","1177697393","Credit card ending in 7511","Payment","USD","302.02","October 2022","AWS Inc.","Usage","-","694214979702"
+"December 3, 2022","1200814669","Credit card ending in 7511","Payment","USD","313.2","November 2022","AWS Inc.","Usage","-","694214979702"
+"January 3, 2023","1224616633","Credit card ending in 7511","Payment","USD","188.91","December 2022","AWS Inc.","Usage","-","694214979702"
+"February 3, 2023","1250916877","Credit card ending in 7511","Payment","USD","146.95","January 2023","AWS Inc.","Usage","-","694214979702"
+"March 3, 2023","1276749537","Credit card ending in 7511","Payment","USD","160.47","February 2023","AWS Inc.","Usage","-","694214979702"
+"April 3, 2023","1303801309","Credit card ending in 7511","Payment","USD","181.72","March 2023","AWS Inc.","Usage","-","694214979702"
+"May 3, 2023","1326015501","Credit card ending in 7511","Payment","USD","200.34","April 2023","AWS Inc.","Usage","-","694214979702"
