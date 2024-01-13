@@ -7,6 +7,11 @@ import dateparser
 
 class ParseInvoice:
     dst_csv = '/Users/sml/git/smltax/dst/invoice.csv'
+
+    dsv_csvs = [
+        '/Users/sml/git/smltax/dst/invoice.csv',
+        '/Users/sml/Dropbox/smluniverse/Tax/2022-2023/docs/expenses.csv'
+    ]
     src_json = '/Users/sml/git/smltax/data/invoice-out-1705105698274.json'
 
     src_aws_csv = '/Users/sml/git/smltax/data/aws-fix.csv'
@@ -217,6 +222,23 @@ class ParseInvoice:
         print(f"Total: {usd_total=}")
         print(f"Total: {usd_total/12=}")
 
+    def write_csvs(self, rows):
+        ignore_fields = [
+            'amount_amount',
+            'amount_currency_symbol',
+            'amount_currency_code',
+        ]
+
+        fields = [f for f in ExpenseItem.__fields__.keys() if f not in ignore_fields]
+
+        for dst_csv in self.dsv_csvs:
+            with open(dst_csv, 'w') as f:
+                writer = csv.DictWriter(f, fields, extrasaction='ignore')
+                writer.writeheader()
+                for row in rows:
+                    writer.writerow(row.dict())
+
+
 
     def run(self):
 
@@ -230,22 +252,11 @@ class ParseInvoice:
         rows = self.sort_rows(rows)
 
         self.calculate_totals(rows)
+        self.write_csvs(rows)
 
 
 
-        ignore_fields = [
-            'amount_amount',
-            'amount_currency_symbol',
-            'amount_currency_code',
-        ]
 
-        fields = [f for f in ExpenseItem.__fields__.keys() if f not in ignore_fields]
-
-        with open(self.dst_csv, 'w') as f:
-            writer = csv.DictWriter(f, fields, extrasaction='ignore')
-            writer.writeheader()
-            for row in rows:
-                writer.writerow(row.dict())
 
 
 def main():
