@@ -1,4 +1,8 @@
 invoice_date,vendor_name,invoice_id,payment_term,product_name,product_code,quantity,invoice_total_amount,invoice_total_currency_symbol,invoice_total_currency_code,vendor_tax_id,customer_name,customer_address_receipient,created_at
+2023-02-23T00:00:00.000Z,,,,,,,198.0,$,TWD,,Mx Lxx Sxx Mxxx,,2024-01-13T00:03:12.731Z
+2023-03-23T00:00:00.000Z,,,,,,,197.0,$,TWD,,Mx Lxx Sxx Mxxx,,2024-01-13T00:03:12.782Z
+2023-04-23T00:00:00.000Z,,,,,,,197.0,$,TWD,,Mx Lxx Sxx Mxxx,,2024-01-13T00:03:12.800Z
+2023-05-23T00:00:00.000Z,,,,,,,197.0,$,TWD,,Mx Lxx Sxx Mxxx,,2024-01-13T00:03:12.789Z
 2022-09-01T00:00:00.000Z,Akamai,,,Servers for RoyaleAPI,,,5153.48,$,USD,,"See-ming Lee
 SML Universe Limited","See-ming Lee
 SML Universe Limited",2024-01-12T23:35:00.718Z
@@ -55,6 +59,7 @@ SML Universe Limited",2024-01-12T23:35:01.410Z
 2023-06-10T00:00:00.000Z,CLOUDFLARE®,,,Cloudflare Pro Plan,,1,121.37,$,USD,,,,2024-01-12T21:19:53.353Z
 2023-07-01T00:00:00.000Z,CLOUDFLARE®,,,"Cloudflare Images Basic
 Images Stored (blocks of 100K Images)",,1,5.0,$,USD,,,,2024-01-12T21:19:53.043Z
+2023-03-01T00:00:00.000Z,FxFactory,,,Motype 2,,,129.0,US$,USD,,,,2024-01-13T00:03:01.719Z
 2022-05-01T00:00:00.000Z,Linode,,,Servers for RoyaleAPI,,,2643.39,$,USD,,"See-ming Lee
 SML Universe Limited","See-ming Lee
 SML Universe Limited",2024-01-12T23:35:00.736Z
@@ -70,8 +75,38 @@ SML Universe Limited",2024-01-12T23:35:01.259Z
 2022-12-01T00:00:00.000Z,Linode,,,Servers for RoyaleAPI,,,5351.28,$,USD,,"See-ming Lee
 SML Universe Limited","See-ming Lee
 SML Universe Limited",2024-01-12T23:35:01.114Z
+2023-02-13T00:00:00.000Z,Midjourney Inc,,,"Standard Plan
+Qty 1",,,30.0,$,USD,,,,2024-01-13T00:02:57.287Z
+2023-03-13T00:00:00.000Z,Midjourney Inc,,,"Standard Plan
+Qty 1",,,30.0,$,USD,,,,2024-01-13T00:02:56.608Z
+2023-03-26T00:00:00.000Z,Midjourney Inc,,,Rollover Credits,,,20.0,$,USD,,,,2024-01-13T00:02:57.039Z
+2023-03-28T00:00:00.000Z,Midjourney Inc,,,"Rollover Credits
+Qty 1",,,20.0,$,USD,,,,2024-01-13T00:02:56.577Z
+2023-03-28T00:00:00.000Z,Midjourney Inc,,,"Rollover Credits
+Qty 1",,,20.0,$,USD,,,,2024-01-13T00:02:56.768Z
+2023-03-31T00:00:00.000Z,Midjourney Inc,,,"Pro Plan
+Qty 1",,,60.0,$,USD,,,,2024-01-13T00:02:56.633Z
+2023-04-22T00:00:00.000Z,Midjourney Inc,,,"Rollover Credits
+Qty 1",,,20.0,$,USD,,,,2024-01-13T00:02:57.472Z
+2023-04-23T00:00:00.000Z,Midjourney Inc,,,"Rollover Credits
+Qty 1",,,20.0,$,USD,,,,2024-01-13T00:02:56.627Z
+2023-04-28T00:00:00.000Z,Midjourney Inc,,,"Rollover Credits
+Qty 1",,,20.0,$,USD,,,,2024-01-13T00:02:56.747Z
+2023-04-30T00:00:00.000Z,Midjourney Inc,,,"Rollover Credits
+Qty 1",,,20.0,$,USD,,,,2024-01-13T00:02:56.404Z
+2023-04-30T00:00:00.000Z,Midjourney Inc,,,"Pro Plan
+Qty 1",,,60.0,$,USD,,,,2024-01-13T00:02:56.836Z
+2023-05-30T00:00:00.000Z,Midjourney Inc,,,"Rollover Credits
+Qty 1",,,20.0,$,USD,,,,2024-01-13T00:02:56.759Z
+2023-05-31T00:00:00.000Z,Midjourney Inc,,,"Pro Plan
+Qty 1",,,60.0,$,USD,,,,2024-01-13T00:02:56.650Z
 2022-04-30T00:00:00.000Z,New Relic.,,Due on receipt,New Relic One - Data (PAYG),,1048,262.0,$,USD,,SML Universe Limited,,2024-01-12T21:20:15.775Z
 2022-05-31T00:00:00.000Z,New Relic.,,Due on receipt,New Relic One - Data (PAYG),,993,248.25,$,USD,,SML Universe Limited,,2024-01-12T21:20:16.039Z
+2023-05-15T00:00:00.000Z,"SKYLUM.
+SKYLUM.",,,Luminar Neo 1 seat,,1,988.0,$,USD,,,,2024-01-13T00:03:01.733Z
+2023-02-06T00:00:00.000Z,"STUDIOS
+SURTEES
+Surtees Studios",,,Bartender 4,,,129.96,$,USD,,,,2024-01-13T00:03:01.873Z
 ,"aescripts+
 aeplugins",,PayPal,Depth Scanner,BCPDS-,0.1,99.99,$,USD,372002852,"See-ming Lee
 SML Universe Limited",,2024-01-12T21:15:10.098Z
@@ -198,3 +233,36 @@ Datylon Account: seeminglee@smluniverse.com",,1,19.95,USD,USD,BE 0521.941.360,SM
 2023-04-30T00:00:00.000Z,new relic,,Due on receipt,New Relic One - Data (PAYG),,856,256.8,$,USD,,SML Universe Limited,,2024-01-12T21:20:15.865Z
 2023-04-30T00:00:00.000Z,new relic,,Due on receipt,New,,,256.8,$,USD,,SML Universe Limited,,2024-01-12T21:20:15.865Z
 2023-05-31T00:00:00.000Z,new relic,,Due on receipt,New Relic One - Data (PAYG),,899,269.7,$,USD,,SML Universe Limited,,2024-01-12T21:20:16.197Z
+2022-05-01T00:00:00.000Z,redis,,,"Subscription #1002956: Redis Cloud/Fixed Plan/AWS/ap-northeast-1/Cache/10GB
+Monthly subscription",,1,248.0,$,USD,,"SML Universe Limited
+ATTN: See-ming Lee",,2024-01-13T00:03:07.120Z
+2022-06-01T00:00:00.000Z,redis,,,"Subscription #1002956: Redis Cloud/Fixed Plan/AWS/ap-northeast-1/Cache/10GB
+Monthly subscription",,1,248.0,$,USD,,"SML Universe Limited
+ATTN: See-ming Lee",,2024-01-13T00:03:07.070Z
+2022-07-01T00:00:00.000Z,redis,,,"Subscription #1002956: Redis Cloud/Fixed Plan/AWS/ap-northeast-1/Cache/10GB
+Monthly subscription",,1,248.0,$,USD,,"SML Universe Limited
+ATTN: See-ming Lee",,2024-01-13T00:03:07.052Z
+2022-10-01T00:00:00.000Z,redis,,,"Subscription #1002956: Redis Cloud/Fixed Plan/AWS/ap-northeast-1/Cache/10GB
+Monthly subscription",,1,248.0,$,USD,,"SML Universe Limited
+ATTN: See-ming Lee",,2024-01-13T00:03:07.067Z
+2022-11-01T00:00:00.000Z,redis,,,"Subscription #1002956: Redis Cloud/Fixed Plan/AWS/ap-northeast-1/Cache/10GB
+Monthly subscription",,1,248.0,$,USD,,"SML Universe Limited
+ATTN: See-ming Lee",,2024-01-13T00:03:07.116Z
+2022-12-01T00:00:00.000Z,redis,,,"Subscription #1002956: Redis Cloud/Fixed Plan/AWS/ap-northeast-1/Cache/10GB
+Monthly subscription",,1,248.0,$,USD,,"SML Universe Limited
+ATTN: See-ming Lee",,2024-01-13T00:03:07.045Z
+2023-01-01T00:00:00.000Z,redis,,,"Subscription #1002956: Redis Cloud/Fixed Plan/AWS/ap-northeast-1/Cache/5GB
+Monthly subscription",,1,127.0,$,USD,,"SML Universe Limited
+ATTN: See-ming Lee",,2024-01-13T00:03:07.089Z
+2023-02-01T00:00:00.000Z,redis,,,"Subscription #1002956: Redis Cloud/Fixed Plan/AWS/ap-northeast-1/Cache/5GB
+Monthly subscription",,1,127.0,$,USD,,"SML Universe Limited
+ATTN: See-ming Lee",,2024-01-13T00:03:07.055Z
+2023-03-01T00:00:00.000Z,redis,,,"Subscription #1002956: Redis Cloud/Fixed Plan/AWS/ap-northeast-1/Cache/5GB
+Monthly subscription",,1,127.0,$,USD,,"SML Universe Limited
+ATTN: See-ming Lee",,2024-01-13T00:03:07.075Z
+2023-04-01T00:00:00.000Z,redis,,,"Subscription #1002956: Redis Cloud/Fixed Plan/AWS/ap-northeast-1/Cache/5GB
+Monthly subscription",,1,127.0,$,USD,,"SML Universe Limited
+ATTN: See-ming Lee",,2024-01-13T00:03:07.164Z
+2023-05-01T00:00:00.000Z,redis,,,"Subscription #1002956: Redis Cloud/Fixed Plan/AWS/ap-northeast-1/Cache/5GB
+Monthly subscription",,1,127.0,$,USD,,"SML Universe Limited
+ATTN: See-ming Lee",,2024-01-13T00:03:07.107Z

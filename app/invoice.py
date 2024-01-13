@@ -2,16 +2,20 @@ import json
 import csv
 
 from app.models.expense import ExpenseItem
+import dateparser
 
 
 class ParseInvoice:
     dst_csv = '/Users/sml/git/smltax/dst/invoice.csv'
-    src_json = '/Users/sml/git/smltax/data/invoice-out-1705102986402.json'
+    src_json = '/Users/sml/git/smltax/data/invoice-out-1705104508271.json'
+
+    src_aws_csv = '/Users/sml/git/smltax/data/aws-transactions_history_2024-01-13T00_01_31.749Z.csv'
+    src_godaddy_csv = '/Users/sml/git/smltax/data/godaddy-export.csv'
 
     def __init__(self):
         pass
 
-    def run(self):
+    def parse_invoice(self):
         with open(self.src_json) as f:
             data = json.load(f)
 
@@ -31,8 +35,8 @@ class ParseInvoice:
                 obj['customer_name'] = datum.get('CustomerName')
                 obj['customer_address_receipient'] = datum.get('CustomerAddressRecipient')
 
-                obj['product_name'] = item.get('Description')
-                obj['product_code'] = item.get('ProductCode')
+                obj['product_name'] = item.get('Description', "")
+                obj['product_code'] = item.get('ProductCode', "")
                 obj['quantity'] = item.get('Quantity')
 
                 obj['amount_amount'] = item.get('Amount', {}).get('amount')
@@ -48,8 +52,8 @@ class ParseInvoice:
                 obj['subtotal_currency_symbol'] = datum.get('Subtotal', {}).get('currencySymbol')
                 obj['subtotal_currency_code'] = datum.get('Subtotal', {}).get('currencyCode')
 
-                obj['vendor_name'] = datum.get('VendorName')
-                obj['vendor_tax_id'] = datum.get('VendorTaxId')
+                obj['vendor_name'] = datum.get('VendorName', "")
+                obj['vendor_tax_id'] = datum.get('VendorTaxId', "")
                 obj['created_at'] = datum.get('created_at')
 
                 obj['payment_term'] = datum.get('PaymentTerm')
@@ -84,6 +88,49 @@ class ParseInvoice:
 
                 rows.append(row)
 
+        return rows
+
+    def parse_aws_rows(self):
+        items = []
+
+        with open(self.src_aws_csv) as f:
+            csv_reader = csv.DictReader(f)
+            for row in csv_reader:
+                print(row)
+                if not row.get('Transaction date'):
+                    continue
+
+                item = ExpenseItem.parse_obj(dict(
+                    invoice_date=dateparser.parse(row['Transaction date']).isoformat(),
+                    vendor_name='Amazon Web Services',
+                    invoice_id=row['Invoice ID'],
+                    producproduct_namet_name="Hosting for RoyaleAPI",
+                    payment_term="Payment method",
+                    invoice_total_amount=float(row['Amount']),
+                    invoice_total_currency_symbol='$',
+                    invoice_total_currency_code=row['Currency'],
+                    amount_amount=float(row['Amount']),
+                    amount_currency_symbol='$',
+                    amount_currency_code=row['Currency'],
+                    created_at=row['Post Date'],
+                ))
+
+                print(item)
+
+                items.append(item)
+        return items
+
+    def parse_godaddy_rows(self):
+        rows = []
+        return rows
+
+    def run(self):
+
+        rows = (
+                self.parse_invoice() +
+                self.parse_aws_rows() +
+                self.parse_godaddy_rows()
+        )
 
         def sort_order(x):
             return (
